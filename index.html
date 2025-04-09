@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-wrapper">
+            <h1>Number Guessing Game</h1>
+            
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="screen active">
+                <h2>Welcome!</h2>
+                <div class="input-group">
+                    <input type="text" id="player-name" placeholder="Enter your name" required>
+                    <button id="start-game">Start Game</button>
+                </div>
+            </div>
+
+            <!-- Game Screen -->
+            <div id="game-screen" class="screen">
+                <div class="game-info">
+                    <p>Welcome, <span id="player-display"></span>!</p>
+                    <p>Lives: <span id="lives">3</span></p>
+                    <p>Range: 1 to <span id="max-number"></span></p>
+                </div>
+                <div class="game-input">
+                    <input type="number" id="guess-input" placeholder="Enter your guess">
+                    <button id="submit-guess">Guess</button>
+                </div>
+                <div id="message" class="message"></div>
+                <div id="hint" class="hint"></div>
+            </div>
+
+            <!-- Result Screen -->
+            <div id="result-screen" class="screen">
+                <h2 id="result-message"></h2>
+                <p>Number of attempts: <span id="attempts">0</span></p>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
